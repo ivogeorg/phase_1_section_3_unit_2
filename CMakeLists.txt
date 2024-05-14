@@ -134,6 +134,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(robot_position_as_array src/robot_position_as_array.cpp)
 add_executable(robot_heading_as_vector src/robot_heading_as_vector.cpp)
+add_executable(path_coordinates src/path_coordinates.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -150,6 +151,9 @@ target_link_libraries(robot_position_as_array
   ${catkin_LIBRARIES}
 )
 target_link_libraries(robot_heading_as_vector
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(path_coordinates
   ${catkin_LIBRARIES}
 )
 
